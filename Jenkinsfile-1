@@ -4,7 +4,9 @@ pipeline{
     stages{
         stage("A"){
             steps{
+            script{
                 echo "Executing step A"
+                }
             }
             post{
                 always{
@@ -21,7 +23,11 @@ pipeline{
 
      stage("B"){
             steps{
+            
+             script{
                 echo "Executing step B"
+                }
+            
             }
             post{
                 always{
@@ -38,7 +44,11 @@ pipeline{
     
       stage("C"){
             steps{
+            
+              script{
                 echo "Executing step C"
+                }
+            
             }
             post{
                 always{
@@ -55,7 +65,9 @@ pipeline{
 
         stage("D"){
             steps{
+            script{
                 echo "Executing step D"
+                }
             }
             post{
                 always{
