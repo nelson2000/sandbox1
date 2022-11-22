@@ -1,1 +1,86 @@
 
+pipeline{
+    agent any
+    
+    stages{
+        stage("A"){
+            steps{
+                echo "Executing step A"
+            }
+            post{
+                always{
+                    echo "I am always"
+                }
+                success{
+                    echo "I am a success"
+                }
+                failure{
+                    echo "I am a failure"
+                }
+            }
+        }
+
+     stage("B"){
+            steps{
+                echo "Executing step B"
+            }
+            post{
+                always{
+                    echo "I am always"
+                }
+                success{
+                    echo "I am a success"
+                }
+                failure{
+                    echo "I am a failure"
+                }
+            }
+        }
+    
+      stage("C"){
+            steps{
+                echo "Executing step C"
+            }
+            post{
+                always{
+                    echo "I am always"
+                }
+                success{
+                    echo "I am a success"
+                }
+                failure{
+                    echo "I am a failure"
+                }
+            }
+        }
+
+        stage("D"){
+            steps{
+                echo "Executing step D"
+            }
+            post{
+                always{
+                    echo "I am always"
+                }
+                success{
+                    echo "I am a success"
+                }
+                failure{
+                    echo "I am a failure"
+                }
+            }
+        }
+
+    }
+    post{
+        always{
+            echo "I am always here"
+        }
+        success{
+            echo "I am a success"
+        }
+        failure{
+            echo "I am a failure"
+        }
+    }
+}
